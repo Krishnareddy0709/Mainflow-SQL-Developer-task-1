@@ -52,3 +52,58 @@ DATA:
 ![Screenshot 2024-12-30 232044](https://github.com/user-attachments/assets/3f0635e0-e531-4991-8703-b21b8b208b1c)
 
 
+## Mainflow-SQL-Developer-task-2
+Mainflow SQL Developer task-2
+Advanced Queries with Joins and Filtering
+
+#Objective:
+Analyze relationships between multiple tables and use SQL joins and filtering techniques to extract meaningful insights from the data.
+
+Project Steps
+Step 1: Database Setup
+Tables to Create
+1. Students:
+ ○ Already created in Task 1.
+ ○ Contains student details such as student_id, name, and email.
+2. Courses:
+ ○ Fields:
+   ■ course_id: Primary Key.
+   ■ course_name: Name of the course.
+   ■ course_description: Optional field for details.
+3. Enrolments:
+ ○ Fields:
+   ■ enrolment_id: Primary Key.
+   ■ student_id: Foreign Key referencing the Students table.
+   ■ course_id: Foreign Key referencing the Courses table.
+   ■ enrolment_date: Date of enrolment.
+
+   ![Screenshot 2025-01-09 232406](https://github.com/user-attachments/assets/c64f4cbe-7509-4b3f-b68c-a16db42f68ef)
+   ![Screenshot 2025-01-09 232531](https://github.com/user-attachments/assets/218f450b-3d18-48ea-b223-8ba99b62dff7)
+
+
+Task 1: List all students and the courses they are enrolled in.
+   ● Use an INNER JOIN to combine Students, Courses, and Enrolments tables.
+   ● Select the student name and course name for all enrolled students. 
+  
+   
+Task 2: Find the number of students enrolled in each course.
+   ● Use a LEFT JOIN between Courses and Enrolments.
+   ● Use GROUP BY to group results by course_id and course_name.
+   ● Use COUNT(student_id) to calculate the number of enrolled students.
+   ● Ensure courses with no enrolments are included in the results.
+   ![Screenshot 2025-01-09 232614](https://github.com/user-attachments/assets/010a0456-458f-4256-a4e8-b7b5fd4902dc)
+
+Task 3: List students who have enrolled in more than one course.
+   ● Use the Enrolments table.
+   ● Group data by student_id.
+   ● Use COUNT(course_id) to calculate the number of courses per student.
+   ● Use the HAVING clause to filter students with enrolments greater than 1.  
+   ![Screenshot 2025-01-09 232651](https://github.com/user-attachments/assets/027f2b57-2f65-42fd-a03d-4dbc5f2687d3)
+
+Task 4: Find courses with no enrolled students.
+   ● Use a LEFT JOIN between Courses and Enrolments.
+   ● Use WHERE enrolment_id IS NULL to filter courses with no enrolments.
+   ![Screenshot 2025-01-09 232718](https://github.com/user-attachments/assets/cf5ee548-c003-45bf-90ce-e20821bcb966)
+
+
+
