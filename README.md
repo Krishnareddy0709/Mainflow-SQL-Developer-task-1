@@ -106,4 +106,60 @@ Task 4: Find courses with no enrolled students.
    ![Screenshot 2025-01-09 232718](https://github.com/user-attachments/assets/cf5ee548-c003-45bf-90ce-e20821bcb966)
 
 
-### Mainflow-SQL-Developer-task-2
+## Mainflow-SQL-Developer-task-3
+   Subqueries and Aggregations
+
+   Objective;
+Use subqueries to extract insights from a dataset and perform data aggregations to summarize
+and analyze the data.
+
+Project Steps
+Step 1: Database Setup
+1. Table: Students
+○ Fields:
+  ■ student_id: Primary Key.
+  ■ name: Name of the student.
+  ■ math_score: Math test score.
+  ■ science_score: Science test score.
+  ■ english_score: English test score.
+  ■ total_score: The sum of all scores for each student (optional if
+calculated dynamically).
+2. Insert sample data with scores for Math, Science, and English for multiple
+students.
+
+![Screenshot 2025-01-17 001627](https://github.com/user-attachments/assets/789ab081-fe90-45fb-a543-88a2b233d327)
+
+Step 2: Tasks to Perform
+Task 1: Identify Top Students by Total Scores
+  ● Use a subquery to calculate the total score (math_score + science_score +
+  english_score) for each student.
+  ● Use an ORDER BY clause to rank students by their total scores in descending order.
+  ● Limit the results to show only the top students (e.g., top 5).
+
+![Screenshot 2025-01-17 001723](https://github.com/user-attachments/assets/892b9565-d879-4bbc-a47b-cbc96365cecb)
+
+Task 2: Calculate Averages Based on Specific Conditions
+● Use subqueries to filter and group data for average calculations:
+  ○ Example 1: Calculate the average score of students who scored above 70 in
+  Math.
+
+  ![Screenshot 2025-01-17 001802](https://github.com/user-attachments/assets/427492f3-cfb0-4921-9431-101f8d4a6d37)
+
+  ○ Example 2: Calculate the average total score of students grouped by a specific
+  condition, such as a score range (e.g., students scoring 200–250 in total)
+
+![Screenshot 2025-01-17 001825](https://github.com/user-attachments/assets/0517cf50-1ffa-436a-b612-7fe343c282c1)
+
+
+Task 3: Find Second-Highest Math Scores
+● Use a subquery to determine the highest Math score and exclude it in a second query to
+  find the next highest value.
+● Example:
+  ○ Use MAX(math_score) in a subquery to find the highest score.
+  ○ Use WHERE math_score < (SELECT MAX(math_score) FROM
+  Students) to exclude the top score and then use MAX again to find the second
+  highest score.
+
+  ![Screenshot 2025-01-17 001901](https://github.com/user-attachments/assets/63082c4a-2c01-491f-9b72-79cd0d2a8c0b)
+
+
