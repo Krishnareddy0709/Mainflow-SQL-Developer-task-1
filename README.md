@@ -163,3 +163,38 @@ Task 3: Find Second-Highest Math Scores
   ![Screenshot 2025-01-17 001901](https://github.com/user-attachments/assets/63082c4a-2c01-491f-9b72-79cd0d2a8c0b)
 
 
+  # Mainflow-SQL-Developer-task-4
+  Task 4: Window Functions
+ Objective: Utilize SQL window functions to rank students and perform cumulative analysis.
+
+Project Steps
+1. Dataset Setup
+● Create and Populate Table:
+  Define a table Students with fields like:
+  ○ StudentID (Primary Key)
+  ○ Name
+  ○ MathScore
+  ○ TotalScore
+● Populate with sample data for the analysis.
+
+![Screenshot 2025-01-22 122155](https://github.com/user-attachments/assets/cfac653c-b4f5-495c-998b-2750965ede4b)
+
+2. Tasks to Perform
+ Task 1: Rank Students Based on Total Scores
+● Query Objective: Use the RANK() function to assign ranks to students based on their TotalScore.
+● Query Explanation:
+  ○ Use RANK() OVER (ORDER BY TotalScore DESC) to rank students in descending order of their total scores.
+  ○ If two students have the same score, they receive the same rank, and the next rank is skipped.
+Task 2: Calculate Running Totals for Math Scores
+● Query Objective: Use the SUM() function with OVER() to calculate running totals of MathScore ordered by StudentID.
+● Query Explanation:
+  ○ Use SUM(MathScore) OVER (ORDER BY StudentID) to compute a cumulative total.
+  ○ This provides the total Math score up to each student in the order specified. How to Execut
+
+
+![Screenshot 2025-01-22 122218](https://github.com/user-attachments/assets/e4c6a9fb-8f68-4117-bc7b-7be2554d7a0e)
+
+
+
+
+
